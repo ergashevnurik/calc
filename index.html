@@ -4,50 +4,51 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="style.css">
 </head> 
-<link rel="stylesheet" href="style.css">
+
 <body>
     
 <section class="calculator">
     <div class="container">
         <table>
             <tr>
-                <td></td>
+                <td colspan="4"> <input id="result" type="text" class="display-box"></td>
             </tr>
             <tr>
-                <td> <input type="button" value="AC"></td>
-                <td> <input type="button" value="+/-"></td>
-                <td input type="button" value="%"></td>>%</td>
-                <td input type="button" value="/"></td>>/</td>
+                <td> <input type="button" class="grey" onclick="cleanScreen()" value="AC"></td>
+                <td> <input type="button" class="grey" onclick="display('-')" value="+/-"></td>
+                <td> <input type="button" class="grey" onclick="display('%')" value="%"></td>>
+                <td> <input type="button" id="btn" onclick="display('/')" value="/"></td>>
             </tr>
               <tr>
-                <td input type="button" value="9"></td>>9</td>
-                <td input type="button" value="8"></td>>8</td>
-                <td input type="button" value="7"></td>>7</td>
-                <td input type="button" value="*"></td>>*</td>
+                <td> <input onclick="display('9')" type="button" value="9"></td>>
+                <td> <input onclick="display('8')" type="button" value="8"></td>>
+                <td> <input onclick="display('7')" type="button" value="7"></td>>
+                <td> <input onclick="display('*')" id="btn" type="button" value="*"></td>>
             </tr>
               <tr>
-                <td input type="button" value="6"></td>>6</td>
-                <td input type="button" value="5"></td>>5</td>
-                <td input type="button" value="4"></td>>4</td>
-                <td input type="button" value="-"></td>>-</td>
+                <td> <input onclick="display('6')" type="button" value="6"></td>>
+                <td> <input onclick="display('5')" type="button" value="5"></td>>
+                <td> <input onclick="display('4')" type="button" value="4"></td>>
+                <td> <input onclick="display('-')" type="button" id="btn" value="-"></td>>
             </tr>
             <tr>
-                <td input type="button" value="3"></td>>3</td>
-                <td input type="button" value="2"></td>>2</td>
-                <td input type="button" value="1"></td>>1</td>
-                <td input type="button" value="+"></td>>+</td>
+                <td> <input onclick="display('3')" type="button" value="3"></td>>
+                <td> <input onclick="display('2')" type="button" value="2"></td>>
+                <td> <input onclick="display('1')" type="button" value="1"></td>>
+                <td> <input onclick="display('+')" id="btn" type="button" value="+"></td>>
             </tr>
             <tr>
-                <tdinput type="button" value="0"></tdinput>>0</td>
-                <td input type="button" value=","></td>>,</td>
-                <td input type="button" value="="></td>>=</td>
+                <td colspan="2"><input class="border-radius-medium" type="button" value="0" onclick="display('0')"></td>
+                <td> <input onclick="display(',')" type="button" value=","></td>
+                <td> <input onclick="calculate()" id="btn" type="button" value="="></td>
             </tr>
         </table>
     </div>
 </section>
 
-<script src="script.js"></script>    
+<script src="main.js"></script>    
 
 </body>
 </html>
